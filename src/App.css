@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@theme {
+  --font-inter: "inter";
+  --color-pink-flamingo: #f85e9f;
+  --color-purple-royal: #5d50c6;
+  --color-yellow-soft: #facd4914;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
