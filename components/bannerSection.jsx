@@ -62,7 +62,6 @@ export default function BannerSection() {
               </div>
             ))}
           </div>
-          {console.log("hello")}
         </div>
       </div>
     </section>

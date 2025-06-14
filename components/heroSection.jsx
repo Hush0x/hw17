@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <>
       <section className="flex pt-16 relative flex-col-reverse xl:flex-row items-center">
-        <div className="w-fit flex flex-col gap-11 h-fit xl:my-32 items-center text-center xl:text-start">
+        <div className="w-fit flex flex-col gap-11 h-fit xl:my-32 items-center text-center xl:text-start xl:items-start">
           <div className="flex text-pink-flamingo font-bold gap-4 shadow-xl shadow-black/10 px-8 w-fit py-5 rounded-full">
             <p>Explore the world!</p>
             <img src="/bag.svg" alt="mail" />

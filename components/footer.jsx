@@ -1,4 +1,6 @@
+import { useState } from "react";
 export default function Footer() {
+  const [footerOpen, setFooterOpen] = useState(false);
   const footerSections = [
     {
       title: "Company",
@@ -42,10 +44,31 @@ export default function Footer() {
       <div className="w-full xl:w-1/2 grid md:grid-cols-3 text-lg text-gray-500 font-normal gap-8">
         {footerSections.map((part, index) => (
           <div key={index} className="flex flex-col gap-8">
-            <h3 className="text-2xl font-bold text-black">{part.title}</h3>
-            {part.items.map((item, i) => (
-              <p key={i}>{item}</p>
-            ))}
+            <h3
+              className="text-2xl font-bold text-black flex justify-between"
+              onClick={() => {
+                setFooterOpen((last) => {
+                  const next = !last;
+                  return next;
+                });
+              }}
+            >
+              {part.title}
+              <img
+                src="/arrow-circle-down.svg"
+                alt="arrow-circle-down"
+                className="md:hidden"
+              />
+            </h3>
+            <div
+              className={`md:flex flex-col gap-8 ${
+                footerOpen ? "flex" : "hidden"
+              }`}
+            >
+              {part.items.map((item, i) => (
+                <p key={i}>{item}</p>
+              ))}
+            </div>
           </div>
         ))}
       </div>
